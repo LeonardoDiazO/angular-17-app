@@ -1,1 +1,33 @@
-<app-user/>
+<div>
+    <h1>
+        "Avances Tecnológicos y Retos Globales: Inteligencia Artificial, Cambio Climático, Teletrabajo y Exploración Espacial"</h1>
+    <article>
+        <p>La inteligencia artificial ha avanzado rápidamente en los últimos años, integrándose en diferentes áreas como la medicina, el transporte y la educación. Estas tecnologías están revolucionando la forma en que interactuamos con el mundo, ofreciendo soluciones más eficientes y personalizadas para tareas complejas.</p>
+    </article>
+
+    <article>
+        <p>El cambio climático es uno de los mayores desafíos de nuestro tiempo. El aumento de las temperaturas globales, la pérdida de biodiversidad y la frecuencia creciente de desastres naturales son solo algunas de las consecuencias que ya estamos experimentando. La cooperación global es esencial para mitigar sus efectos.</p>
+    </article>
+
+    <article>
+        <p>El teletrabajo se ha convertido en una modalidad laboral común desde la pandemia. Muchas empresas han adoptado modelos híbridos, combinando el trabajo remoto con el presencial. Esto ha transformado la dinámica laboral, ofreciendo mayor flexibilidad pero también nuevos retos para la gestión y el bienestar de los empleados.</p>
+    </article>
+
+    <article>
+        <p>La exploración espacial sigue siendo un campo lleno de misterios y descubrimientos. Con misiones a Marte y la vuelta a la Luna en la agenda, los avances en tecnología espacial prometen abrir nuevas fronteras para la humanidad. El futuro de la exploración espacial apunta no solo a la ciencia, sino también a la posibilidad de asentamientos fuera de la Tierra.</p>
+    </article>
+<!-- Diferimos la carga del componente <app-comments> hasta que esté en el viewport -->
+    @defer(on viewport){
+        <!-- Componente que muestra los comentarios de la aplicación -->
+        <app-comments></app-comments>
+    }
+    
+    <!-- Placeholder que se muestra mientras el componente de comentarios se carga -->
+    @placeholder{
+       
+        <p>.</p>
+    }
+    @loading{
+        <p>Cargando comentarios...</p>
+    }
+</div>
